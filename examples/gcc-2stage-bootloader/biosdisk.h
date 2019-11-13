@@ -49,7 +49,7 @@ reset_disk (disk_info_s *const disk_info);
 extern fastcall uint8_t
 read_sector_chs (disk_info_s *const disk_info);
 
-/* Forced inline version of reset_sector */
+/* Forced inline version of reset_disk */
 static inline fastcall always_inline uint8_t
 reset_disk_i (disk_info_s *const disk_info)
 {
@@ -74,7 +74,7 @@ reset_disk_i (disk_info_s *const disk_info)
 
 }
 
-/* Forced inline version of read_sector */
+/* Forced inline version of read_sector_chs */
 static inline fastcall always_inline uint8_t
 read_sector_chs_i (disk_info_s *const disk_info)
 {
