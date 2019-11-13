@@ -2,7 +2,7 @@
 #include "realmode.h"
 #include "biostty.h"
 
-/* main "C" function */
+/* main "C" function. Will be part of code loaded for stage2 */
 void main(const uint8_t drive_num)
 {
     static char *strHello = "Hello ";

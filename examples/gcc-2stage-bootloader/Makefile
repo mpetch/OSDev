@@ -56,7 +56,7 @@ $(FLOPPY_IMG): $(KERNEL_BIN)
 
 clean:
 	rm -f $(OBJS) \
-		$(OBJS_NASM) \
+		$(OBJS_ASM) \
 		$(KERNEL_BIN) \
 		$(KERNEL_ELF) \
 		$(FLOPPY_IMG)
