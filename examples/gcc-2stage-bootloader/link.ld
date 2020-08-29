@@ -15,7 +15,7 @@ SECTIONS
 
     .text.mbr : SUBALIGN(0) {
         mbrboot.o(.text.entry);
-        mbrboot.o(.text);
+        mbrboot.o(.text*);
     }
     .data.mbr : SUBALIGN(4) {
         mbrboot.o(.data);
@@ -32,7 +32,7 @@ SECTIONS
 
     .text : SUBALIGN(4) {
         *(.text.start);
-        *(.text);
+        *(.text*);
     }
 
     .data : SUBALIGN(4) {
@@ -44,7 +44,7 @@ SECTIONS
 
     .bss : SUBALIGN(4) {
         __bss_start = .;
-        *(.COMMON);
+        *(COMMON);
         *(.bss)
     }
     . = ALIGN(4);
